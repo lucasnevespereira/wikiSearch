@@ -1,0 +1,7 @@
+form {
+  display: flex;
+}
+
+select {
+  margin-left: 15px;
+}

@@ -1,5 +1,5 @@
 <div class="container">
+  <h1 class="title has-text-centered">WikiSearch</h1>
   <app-search-bar (submitted)="onTerm($event)"></app-search-bar>
-
   <app-page-list *ngIf="pages.length" [searchResult]="pages"></app-page-list>
 </div>
