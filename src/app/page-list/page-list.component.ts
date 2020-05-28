@@ -7,8 +7,11 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class PageListComponent implements OnInit {
   @Input() searchResult = [];
+  @Input() searchLang = "";
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log("SearchLang in Page List => " + this.searchLang);
+  }
 }

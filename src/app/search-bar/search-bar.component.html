@@ -1,12 +1,12 @@
 <div class="box">
   <form (submit)="onFormSubmit($event)">
     <input
-      placeholder="Enter Search Term"
+      [placeholder]="placeholder"
       class="input"
       (input)="term = $event.target.value"
     />
     <div class="select is-rounded">
-      <select>
+      <select (change)="onSelectLang($event.target.value)">
         <option>En</option>
         <option>Fr</option>
       </select>
