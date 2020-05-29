@@ -8,11 +8,16 @@ import { WikipediaService } from "./wikipedia.service";
 })
 export class AppComponent {
   pages = [];
+  language = "";
 
   constructor(private wikipedia: WikipediaService) {}
 
+  onSelectLang(value: string) {
+    this.language = value;
+  }
+
   onTerm(term: string) {
-    this.wikipedia.search(term).subscribe((response: any) => {
+    this.wikipedia.search(term, this.language).subscribe((response: any) => {
       console.log(response);
       this.pages = response.query.search;
     });

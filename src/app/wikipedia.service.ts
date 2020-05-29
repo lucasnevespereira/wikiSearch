@@ -9,8 +9,8 @@ export class WikipediaService {
   // Thanks to injectable decorator it will instance our class from common/http
   constructor(private http: HttpClient) {}
 
-  search(term: string) {
-    return this.http.get("https://en.wikipedia.org/w/api.php", {
+  search(term: string, lang: string) {
+    return this.http.get(`https://${lang}.wikipedia.org/w/api.php`, {
       params: {
         action: "query",
         format: "json",

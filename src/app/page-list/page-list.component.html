@@ -11,7 +11,9 @@
       <td>
         <a
           target="_blank"
-          [href]="'https://en.wikipedia.org?curid=' + page.pageid"
+          [href]="
+            'https://' + searchLang + '.wikipedia.org?curid=' + page.pageid
+          "
         >
           {{ page.title }}
         </a>
